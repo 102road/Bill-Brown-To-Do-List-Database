@@ -11,9 +11,7 @@ app.use(express.json());
 app.use(bp.json());
 app.use(bp.urlencoded({ extended: true }));
 
-app.use('/', (req,res)=> {
-  res.send('Welcome the project pursuit database')
-})
+app.use("/", usersRouter);
 app.use("/users", usersRouter);
 app.use("/projects", dataRouter);
 
