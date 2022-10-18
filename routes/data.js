@@ -3,7 +3,7 @@ const router = express.Router();
 const dataController = require("../controllers/dataController");
 const userController = require('../controllers/userController');
 
-router.get("/", userController.authenticateToken, dataController.getAllUserProjects);
+router.get("/projects", userController.authenticateToken, dataController.getAllUserProjects);
 router.get("/:projectTitle", userController.authenticateToken, dataController.getSingleUserProject);
 router.get('/:projectTitle/toDos', userController.authenticateToken, dataController.getAllUserToDosForSingleProject);
 router.get('/:projectTitle/:toDoTitle', userController.authenticateToken, dataController.getSingleUserToDoForSingleProject);

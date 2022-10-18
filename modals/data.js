@@ -1,6 +1,5 @@
 const path = require("path");
 const fs = require("fs");
-const { title } = require("process");
 
 // utility functions
 const createUserJSONfile = (user) => {

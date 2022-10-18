@@ -97,6 +97,7 @@ const postNewProject = async (req, res) => {
       time: req.body.time,
       dateAdded: new Date(),
       completed: false,
+      toDos:[]
     };
     data.postNewProject(req.user.username, userData);
     res.sendStatus(201);
@@ -117,6 +118,7 @@ const postNewTodo = async (req, res) => {
       time: req.body.time,
       dateAdded: new Date(),
       complete: false,
+      tasks:[]
     };
     data.postNewTodoToProject(req.user.username, userData);
     res.sendStatus(201);
